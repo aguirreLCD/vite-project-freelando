@@ -1,4 +1,5 @@
 import { Card } from "./components/Card/Card.jsx";
+import { Footer } from "./components/Footer/Footer.jsx";
 import { GlobalStyles } from "./components/GlobalStyles/GlobalStyles.jsx";
 import { Header } from "./components/Header/Header.jsx";
 import { InputText } from "./components/InputText/InputText.jsx";
@@ -23,6 +24,7 @@ function App() {
 
         <InputText label="Full Name:" />
       </Card>
+      <Footer />
     </ThemeProviderContext>
   );
 }

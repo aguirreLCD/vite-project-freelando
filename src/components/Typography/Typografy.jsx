@@ -68,3 +68,4 @@ export const Typography = ({ variantToBindStyle, htmlElement, children }) => {
 
   return <CurrentElement>{children} </CurrentElement>;
 };
+
