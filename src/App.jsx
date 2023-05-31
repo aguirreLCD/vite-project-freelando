@@ -1,11 +1,15 @@
-import { GlobalStyles } from "./components/GlobalStyles/GlobalStyles";
+import { Card } from "./components/Card/Card.jsx";
+import { GlobalStyles } from "./components/GlobalStyles/GlobalStyles.jsx";
+import { ThemeProviderContext } from "./components/ThemeProviderContext/ThemeProviderContext.jsx";
 
 function App() {
   return (
-    <div>
+    <ThemeProviderContext>
       <GlobalStyles />
-      <h1>Hello, Vite!</h1>
-    </div>
+      <Card>
+        <h1>Freelando</h1>
+      </Card>
+    </ThemeProviderContext>
   );
 }
 
