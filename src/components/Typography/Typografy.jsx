@@ -14,6 +14,7 @@ const htmlElements = {
 };
 
 // bind styles
+// objectName = { property: "newvalue"}
 const htmlElementStyles = {
   h1: `
         font-weight: 600;
