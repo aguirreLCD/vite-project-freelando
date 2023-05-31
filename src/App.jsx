@@ -1,3 +1,4 @@
+import { Col, Container, Row } from "react-grid-system";
 import { Card } from "./components/Card/Card.jsx";
 import { Footer } from "./components/Footer/Footer.jsx";
 import { GlobalStyles } from "./components/GlobalStyles/GlobalStyles.jsx";
@@ -10,21 +11,28 @@ function App() {
   return (
     <ThemeProviderContext>
       <GlobalStyles />
-      <Header />
-      <Card>
-        <Typography variantToBindStyle="h1" htmlElement="h1">
-          Freelando
-        </Typography>
+      {/* <Header /> */}
+      <Container>
+        <Row justify="center">
+          <Col lg={6}>
+            <Card>
+              <Typography variantToBindStyle="h1" htmlElement="h1">
+                Freelando
+              </Typography>
 
-        <Typography variantToBindStyle="body" htmlElement="body">
-          Create your profile for free to start working with the best
-          freelancers. Then you can give more details about your demands and
-          your way of working.
-        </Typography>
+              <Typography variantToBindStyle="body" htmlElement="body">
+                Create your profile for free to start working with the best
+                freelancers. Then you can give more details about your demands
+                and your way of working.
+              </Typography>
 
-        <InputText label="Full Name:" />
-      </Card>
-      <Footer />
+              <InputText label="Full Name:" />
+            </Card>
+          </Col>
+        </Row>
+      </Container>
+
+      {/* <Footer /> */}
     </ThemeProviderContext>
   );
 }
