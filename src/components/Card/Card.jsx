@@ -2,7 +2,6 @@
 import styled from "@emotion/styled";
 
 const StyledDiv = styled.div`
-  margin: 1rem;
   padding: ${(props) => props.theme.padding.l};
   background: ${(props) => props.theme.colors.secondary.a};
   border: 1px solid;

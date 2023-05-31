@@ -38,6 +38,8 @@ const modeTheme = {
     xl: "48px",
     xxl: "64px",
   },
+
+  fontFamily: "'Montserrat', sans-serif",
 };
 
 export const ThemeProviderContext = ({ children }) => {
