@@ -6,12 +6,13 @@ import { Header } from "./components/Header/Header.jsx";
 import { InputText } from "./components/InputText/InputText.jsx";
 import { ThemeProviderContext } from "./components/ThemeProviderContext/ThemeProviderContext.jsx";
 import { Typography } from "./components/Typography/Typografy.jsx";
+import { Button } from "./components/Button/Button.jsx";
 
 function App() {
   return (
     <ThemeProviderContext>
       <GlobalStyles />
-      {/* <Header /> */}
+      <Header />
       <Container>
         <Row justify="center">
           <Col lg={6}>
@@ -29,10 +30,14 @@ function App() {
               <InputText label="Full Name:" />
             </Card>
           </Col>
+          <Button btnType="secondary">Freelancer</Button>
+          <Button btnType="primary" btnState="default">
+            Already a client
+          </Button>
         </Row>
       </Container>
 
-      {/* <Footer /> */}
+      <Footer />
     </ThemeProviderContext>
   );
 }
