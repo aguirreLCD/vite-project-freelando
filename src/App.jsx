@@ -15,7 +15,7 @@ function App() {
       <Header />
       <Container>
         <Row justify="center">
-          <Col lg={6}>
+          <Col lg={6} md={8} sm={12}>
             <Card>
               <Typography variantToBindStyle="h1" htmlElement="h1">
                 Freelando
