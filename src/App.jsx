@@ -13,7 +13,7 @@ function App() {
     <ThemeProviderContext>
       <GlobalStyles />
       <Header />
-      <Container>
+      <Container style={{ margin: "80px 0" }}>
         <Row justify="center">
           <Col lg={6} md={8} sm={12}>
             <Card>
@@ -72,7 +72,6 @@ function App() {
                   </div>
                 </Col>
               </Row>
-              
             </Card>
           </Col>
         </Row>

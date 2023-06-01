@@ -2,8 +2,6 @@
 import styled from "@emotion/styled";
 
 const StyledPrimaryButton = styled.button`
-  padding: ${(props) => props.theme.padding.xs},
-    ${(props) => props.theme.padding.s};
   background: ${(props) => props.theme.colors.primary.b};
   border-radius: ${(props) => props.theme.padding.s};
   color: ${(props) => props.theme.colors.white};
@@ -21,16 +19,20 @@ const StyledPrimaryButton = styled.button`
   &:focus {
     outline-color: ${(props) => props.theme.colors.dark.d};
   }
+
+  padding-top: ${(props) => props.theme.padding.xs};
+  padding-bottom: ${(props) => props.theme.padding.xs};
+  padding-right: ${(props) => props.theme.padding.s};
+  padding-left: ${(props) => props.theme.padding.s};
 `;
 
 const StyledSecondaryButton = styled.button`
   color: ${(props) => props.theme.colors.primary.b};
-  background: transparent;
+  background: #f8f8fd;
 
   border: 2px solid ${(props) => props.theme.colors.primary.b};
   border-radius: ${(props) => props.theme.padding.s};
-  padding: ${(props) => props.theme.padding.xs},
-    ${(props) => props.theme.padding.s};
+
   box-sizing: border-box;
   font-weight: 700;
   font-size: 16px;
@@ -44,15 +46,17 @@ const StyledSecondaryButton = styled.button`
   &:focus {
     outline-color: ${(props) => props.theme.colors.focus};
   }
+  padding-top: ${(props) => props.theme.padding.xs};
+  padding-bottom: ${(props) => props.theme.padding.xs};
+  padding-right: ${(props) => props.theme.padding.s};
+  padding-left: ${(props) => props.theme.padding.s};
 `;
 
-export const Button = ({
-  children,
-  btnType = "primary",
-  btnState = "default",
-}) => {
-  if (btnType === "primary" && btnState === "default") {
+export const Button = ({ children, btnType = "primary" }) => {
+  if (btnType === "primary") {
     return <StyledPrimaryButton>{children}</StyledPrimaryButton>;
   }
   return <StyledSecondaryButton>{children}</StyledSecondaryButton>;
 };
+
+//  btnState = "default", "hover, "
