@@ -7,12 +7,31 @@ import { InputText } from "./components/InputText/InputText.jsx";
 import { ThemeProviderContext } from "./components/ThemeProviderContext/ThemeProviderContext.jsx";
 import { Typography } from "./components/Typography/Typografy.jsx";
 import { Button } from "./components/Button/Button.jsx";
+import { FreelandoLogo } from "./components/Icons/FreelandoLogo.jsx";
+import { InstagramIcon } from "./components/Icons/InstagramIcon.jsx";
+import { TwitchIcon } from "./components/Icons/TwitchIcon.jsx";
+import { TwitterIcon } from "./components/Icons/TwitterIcon.jsx";
+import { WhatsAppIcon } from "./components/Icons/WhatsAppIcon.jsx";
 
 function App() {
   return (
     <ThemeProviderContext>
       <GlobalStyles />
-      <Header />
+
+      <Header>
+        <Container>
+          <Row justify="between">
+            <Col align="start">
+              <FreelandoLogo />
+            </Col>
+
+            <Col align="end">
+              <p> Login</p>
+            </Col>
+          </Row>
+        </Container>
+      </Header>
+
       <Container style={{ margin: "80px 0" }}>
         <Row justify="center">
           <Col lg={6} md={8} sm={12}>
@@ -76,7 +95,27 @@ function App() {
           </Col>
         </Row>
       </Container>
-      <Footer />
+
+      <Footer>
+        <Container>
+          <Row>
+            <Col align="start">
+              <FreelandoLogo />
+              <p>Designed by Alura</p>
+            </Col>
+
+            <Col align="end">
+              <p>Follow us:</p>
+              <div>
+                <WhatsAppIcon />
+                <TwitchIcon />
+                <InstagramIcon />
+                <TwitterIcon />
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </Footer>
     </ThemeProviderContext>
   );
 }
