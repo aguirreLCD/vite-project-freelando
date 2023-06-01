@@ -27,16 +27,56 @@ function App() {
                 and your way of working.
               </Typography>
 
-              <InputText label="Full Name:" />
+              <Row>
+                <Col lg={12} md={12} sm={12}>
+                  <InputText label="Full Name:" />
+                </Col>
+              </Row>
+
+              <Row>
+                <Col lg={4} md={4} sm={4}>
+                  <InputText label="State:" />
+                </Col>
+
+                <Col lg={8} md={8} sm={8}>
+                  <InputText label="City:" />
+                </Col>
+              </Row>
+
+              <Row>
+                <Col>
+                  <InputText label="Email:" />
+                </Col>
+              </Row>
+
+              <Row>
+                <Col lg={6} md={6} sm={6}>
+                  <InputText label="Password:" />
+                </Col>
+
+                <Col lg={6} md={6} sm={6}>
+                  <InputText label="Confirm password:" />
+                </Col>
+              </Row>
+
+              <Row>
+                <Col lg={6} md={6} sm={6}>
+                  <div style={{ textAlign: "left" }}>
+                    <Button btnType="secondary">Next</Button>
+                  </div>
+                </Col>
+
+                <Col lg={6} md={6} sm={6}>
+                  <div style={{ textAlign: "right" }}>
+                    <Button btnType="primary">Back</Button>
+                  </div>
+                </Col>
+              </Row>
+              
             </Card>
           </Col>
-          <Button btnType="secondary">Freelancer</Button>
-          <Button btnType="primary" btnState="default">
-            Already a client
-          </Button>
         </Row>
       </Container>
-
       <Footer />
     </ThemeProviderContext>
   );
