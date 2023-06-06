@@ -5,7 +5,8 @@
 **Freelando** is a project bootstrapped with create vite@latest:
 ([using Vite for bundler and dev server])
 
-```npm create vite@latest
+```
+npm create vite@latest
 
 ```
 
@@ -33,13 +34,17 @@ Open `http://localhost:5173` with your browser to see the application running.
 
 ## About the Project:
 
+A small but feature-rich app that lets you create a profile and keep track of other freelancers.
+The main idea is to further evolve knowledge in React and component styling by creating, reading, searching, updating, and deleting data.
+
 ## Technologies Used:
 
 - Vite.js;
 - React.js;
 - HTML, CSS, Javascript;
-- React Router;
-- Emotion lib;
+- @emotion/css;
+- react-grid-system;
+- react-router-dom;
 - Git - Github;
 - Trello;
 - Vercel;
@@ -72,5 +77,6 @@ Open `http://localhost:5173` with your browser to see the application running.
 ## Backlog - Features:
 
 - [ ] Create a Link Component;
-- [ ] Create a Router Component;
-- [ ]
+- [ ] Create a Router;
+- [ ] Create a Root layout;
+- [ ] Create an Error Page Component;
