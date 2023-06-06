@@ -12,6 +12,37 @@ import { InstagramIcon } from "./components/Icons/InstagramIcon.jsx";
 import { TwitchIcon } from "./components/Icons/TwitchIcon.jsx";
 import { TwitterIcon } from "./components/Icons/TwitterIcon.jsx";
 import { WhatsAppIcon } from "./components/Icons/WhatsAppIcon.jsx";
+import { DropDownList } from "./components/DropDownList/DropDownList.jsx";
+
+const brazilianStates = [
+  { text: "Acre", value: "AC" },
+  { text: "Alagoas", value: "AL" },
+  { text: "Amapá", value: "AP" },
+  { text: "Amazonas", value: "AM" },
+  { text: "Bahia", value: "BA" },
+  { text: "Ceará", value: "CE" },
+  { text: "Distrito Federal", value: "DF" },
+  { text: "Espírito Santo", value: "ES" },
+  { text: "Goiás", value: "GO" },
+  { text: "Maranhão", value: "MA" },
+  { text: "Mato Grosso", value: "MT" },
+  { text: "Mato Grosso do Sul", value: "MS" },
+  { text: "Minas Gerais", value: "MG" },
+  { text: "Pará", value: "PA" },
+  { text: "Paraíba", value: "PB" },
+  { text: "Paraná", value: "PR" },
+  { text: "Pernambuco", value: "PE" },
+  { text: "Piauí", value: "PI" },
+  { text: "Rio de Janeiro", value: "RJ" },
+  { text: "Rio Grande do Norte", value: "RN" },
+  { text: "Rio Grande do Sul", value: "RS" },
+  { text: "Rondônia", value: "RO" },
+  { text: "Roraima", value: "RR" },
+  { text: "Santa Catarina", value: "SC" },
+  { text: "São Paulo", value: "SP" },
+  { text: "Sergipe", value: "SE" },
+  { text: "Tocantins", value: "TO" },
+];
 
 function App() {
   return (
@@ -26,7 +57,7 @@ function App() {
             </Col>
 
             <Col align="end">
-              <p> Login</p>
+              <p>Login</p>
             </Col>
           </Row>
         </Container>
@@ -54,7 +85,7 @@ function App() {
 
               <Row>
                 <Col lg={4} md={4} sm={4}>
-                  <InputText label="State:" />
+                  <DropDownList title="State" options={brazilianStates} />
                 </Col>
 
                 <Col lg={8} md={8} sm={8}>
@@ -105,8 +136,8 @@ function App() {
             </Col>
 
             <Col align="end">
-              <p>Follow us:</p>
               <div>
+                <p>Follow us:</p>
                 <WhatsAppIcon />
                 <TwitchIcon />
                 <InstagramIcon />
