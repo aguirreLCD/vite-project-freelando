@@ -43,6 +43,10 @@ const StyledDropDownListItem = styled.li`
   &:last-child {
     border: none;
   }
+
+  color: ${(props) =>
+    props.focusOnOption ? props.theme.colors.focus : "inherit"};
+
   &:hover {
     color: ${(props) => props.theme.colors.focus};
   }
@@ -62,17 +66,68 @@ const StyledDropDownList = styled.ul`
   margin: 0;
   padding: 0 ${(props) => props.theme.padding.m};
   list-style: none;
+  font-size: 0.9rem;
 `;
 
 /* eslint-disable react/prop-types */
 export const DropDownList = ({ title, options }) => {
   const [showList, setShowList] = useState(false);
 
+  const [currentOption, setCurrentOption] = useState(null);
+
+  const [selectedOption, setSelectedOption] = useState(null);
+
+  const keyboardEventHandler = (event) => {
+    setShowList(true);
+
+    switch (event.key) {
+      case "ArrowDown":
+        event.preventDefault();
+
+        setCurrentOption((previousOption) => {
+          if (previousOption == null) {
+            return 0;
+          }
+
+          return (previousOption += 1);
+        });
+
+        break;
+
+      case "ArrowUp":
+        event.preventDefault();
+
+        setCurrentOption((previousOption) => {
+          if (!previousOption) {
+            return 0;
+          }
+
+          return (previousOption -= 1);
+        });
+
+        break;
+
+      case "Enter":
+        event.preventDefault();
+        setCurrentOption(null);
+        setShowList(false);
+        setSelectedOption(options[currentOption]);
+        break;
+
+      default:
+        break;
+    }
+  };
+
   return (
     <StyledLabel>
       {title}
-      <StyledButton showList={showList} onClick={() => setShowList(!showList)}>
-        <div>Select</div>
+      <StyledButton
+        showList={showList}
+        onClick={() => setShowList(!showList)}
+        onKeyDown={keyboardEventHandler}
+      >
+        <div>{selectedOption ? selectedOption.text : "Select"}</div>
 
         <div>
           <span>{showList ? "▲" : "▼"}</span>
@@ -81,8 +136,12 @@ export const DropDownList = ({ title, options }) => {
 
       {showList && (
         <StyledDropDownList>
-          {options.map((option) => (
-            <StyledDropDownListItem key={option.value}>
+          {options.map((option, index) => (
+            <StyledDropDownListItem
+              key={option.value}
+              focusOnOption={index === currentOption}
+              onClick={() => setSelectedOption(option)}
+            >
               {" "}
               {option.text}
             </StyledDropDownListItem>

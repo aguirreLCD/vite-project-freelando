@@ -84,11 +84,11 @@ function App() {
               </Row>
 
               <Row>
-                <Col lg={4} md={4} sm={4}>
+                <Col lg={5} md={5} sm={5}>
                   <DropDownList title="State" options={brazilianStates} />
                 </Col>
 
-                <Col lg={8} md={8} sm={8}>
+                <Col lg={7} md={7} sm={7}>
                   <InputText label="City:" />
                 </Col>
               </Row>
@@ -100,24 +100,24 @@ function App() {
               </Row>
 
               <Row>
-                <Col lg={6} md={6} sm={6}>
+                <Col lg={5} md={5} sm={5}>
                   <InputText label="Password:" />
                 </Col>
 
-                <Col lg={6} md={6} sm={6}>
+                <Col lg={7} md={7} sm={7}>
                   <InputText label="Confirm password:" />
                 </Col>
               </Row>
 
               <Row>
-                <Col lg={6} md={6} sm={6}>
+                <Col>
                   <div style={{ textAlign: "left" }}>
                     <Button btnType="secondary">Next</Button>
                   </div>
                 </Col>
 
-                <Col lg={6} md={6} sm={6}>
-                  <div style={{ textAlign: "right" }}>
+                <Col>
+                  <div style={{ textAlign: "end" }}>
                     <Button btnType="primary">Back</Button>
                   </div>
                 </Col>
