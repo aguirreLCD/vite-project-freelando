@@ -51,12 +51,12 @@ function App() {
 
       <Header>
         <Container>
-          <Row justify="between">
-            <Col align="start">
+          <Row>
+            <Col align="center">
               <FreelandoLogo />
             </Col>
 
-            <Col align="end">
+            <Col align="center">
               <p>Login</p>
             </Col>
           </Row>
@@ -130,12 +130,14 @@ function App() {
       <Footer>
         <Container>
           <Row>
-            <Col align="start">
+            <Col align="center">
               <FreelandoLogo />
-              <p>Designed by Alura</p>
+              <p style={{ fontSize: "0.75rem" }}>
+                Designed by Alura. Develop by Lili.
+              </p>
             </Col>
 
-            <Col align="end">
+            <Col align="center">
               <div>
                 <p>Follow us:</p>
                 <WhatsAppIcon />

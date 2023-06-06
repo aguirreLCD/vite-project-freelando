@@ -89,6 +89,10 @@ export const DropDownList = ({ title, options }) => {
             return 0;
           }
 
+          if (previousOption === options.length - 1) {
+            return options.length - 1;
+          }
+
           return (previousOption += 1);
         });
 
@@ -112,6 +116,13 @@ export const DropDownList = ({ title, options }) => {
         setCurrentOption(null);
         setShowList(false);
         setSelectedOption(options[currentOption]);
+        break;
+
+      case "Tab":
+      case "Escape":
+        event.preventDefault();
+        setCurrentOption(null);
+        setShowList(false);
         break;
 
       default:
