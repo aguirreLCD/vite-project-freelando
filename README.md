@@ -76,7 +76,7 @@ The main idea is to further evolve knowledge in React and component styling by c
 
 ## Backlog - Features:
 
-- [ ] Create a Link Component;
-- [ ] Create a Router;
+- [ ] Create a Browser Router;
 - [ ] Create a Root layout;
+- [ ] Create a Link Component;
 - [ ] Create an Error Page Component;

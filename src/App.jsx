@@ -44,7 +44,7 @@ const brazilianStates = [
   { text: "Tocantins", value: "TO" },
 ];
 
-function App() {
+const App = () => {
   return (
     <ThemeProviderContext>
       <GlobalStyles />
@@ -151,6 +151,6 @@ function App() {
       </Footer>
     </ThemeProviderContext>
   );
-}
+};
 
 export default App;
