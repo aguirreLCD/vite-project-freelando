@@ -53,10 +53,12 @@ The main idea is to further evolve knowledge in React and component styling by c
 
 - Create an app with vite starter;
 - Organize folders and files;
+- Roles of folders and files in vite;
 - Install and use additional libs;
 - Control states and use props on components;
-- React Router helps to manage the navigation among pages;
-- Context API;
+- Use React Router to manage the navigation among pages;
+- Implement Brouser Router in vite (differences from CRA);
+- Use Context API to pass global variables, as an alternative to prop drilling;
 
 ## Project components:
 
@@ -77,6 +79,7 @@ The main idea is to further evolve knowledge in React and component styling by c
 ## Backlog - Features:
 
 - [ ] Create a Browser Router;
-- [ ] Create a Root layout;
+- [ ] Configure first route.
+- [ ] Create a Root layout (global layout);
 - [ ] Create a Link Component;
 - [ ] Create an Error Page Component;
