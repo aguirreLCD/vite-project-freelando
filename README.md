@@ -83,3 +83,5 @@ The main idea is to further evolve knowledge in React and component styling by c
 - [ ] Create a Root layout (global layout);
 - [ ] Create a Link Component;
 - [ ] Create an Error Page Component;
+- [ ] Create an Error Handler;
+- [ ]
